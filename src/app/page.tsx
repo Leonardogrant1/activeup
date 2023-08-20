@@ -1,113 +1,174 @@
-import Image from 'next/image'
+import React from "react";
 
-export default function Home() {
+import { FaHome, FaTrash, FaShieldAlt, FaTree } from "react-icons/fa";
+import { PiPlanetFill } from "react-icons/pi";
+import { RiVipDiamondFill } from "react-icons/ri";
+import { SiStackblitz } from "react-icons/si";
+import { BiBlock } from "react-icons/bi";
+import { ImArrowDown2 } from "react-icons/im";
+import AnimatedSeriveItem from "./components/animated_service_item";
+import FadeInText from "./components/fade-in-text";
+import BouncingButton from "./components/bouncing-button";
+
+export default function Page() {
+  const servicesData = [
+    {
+      name: "Hausmeisterservice",
+      icon: <FaHome />,
+      description: `Unser Hausmeisterservice kümmert sich um die Pflege und Instandhaltung Ihrer Immobilie. Von der Reparatur kleinerer Defekte bis zur regelmäßigen Reinigung – wir sind Ihr zuverlässiger Partner für alle Anliegen rund um Ihr Zuhause.`,
+    },
+    {
+      name: "Müllmanagment",
+      icon: <FaTrash />,
+      description: `Unser Müllmanagement-Service sorgt für die effiziente Entsorgung und Trennung von Abfällen. Wir arbeiten daran, Umweltauswirkungen zu minimieren und Ihre Umgebung sauber und nachhaltig zu gestalten.`,
+    },
+    {
+      name: "Winterdienst",
+      icon: <FaShieldAlt />,
+      description: `Unser Winterdienst stellt sicher, dass Ihr Grundstück sicher und zugänglich bleibt, selbst bei den strengsten Wetterbedingungen. Schnee und Eis werden von unseren Fachleuten fachgerecht beseitigt.`,
+    },
+    {
+      name: "Gartenpflege",
+      icon: <PiPlanetFill />,
+      description: `Unsere Gartenpflege-Experten kümmern sich um Ihre Grünanlagen. Wir gestalten und pflegen Gärten, damit Sie sich in Ihrer grünen Oase wohlfühlen können.`,
+    },
+    {
+      name: "Außenreinigung",
+      icon: <FaTree />,
+      description: `Unsere Außenreinigungsdienste sorgen für eine makellose Fassade und saubere Außenbereiche. Wir entfernen Schmutz und Ablagerungen, um den Wert Ihrer Immobilie zu erhalten.`,
+    },
+    {
+      name: "Innenreinigung",
+      icon: <RiVipDiamondFill />,
+      description: `Unsere Innenreinigungsexperten kümmern sich um Sauberkeit und Hygiene in Ihrem Zuhause oder Geschäft. Wir sorgen dafür, dass jeder Raum strahlend sauber ist.`,
+    },
+    {
+      name: "PV-Anlage Nanoversieglung",
+      icon: <SiStackblitz />,
+      description: `Unsere PV-Anlagen Nanoversieglung maximiert die Leistung Ihrer Solaranlagen und minimiert Wartungsaufwand. Mit modernster Nanotechnologie schützen wir Ihre Paneele vor Verschmutzung, was zu höherer Energieerzeugung und langfristigen Einsparungen führt.`,
+    },
+    {
+      name: "Taubenabwehr",
+      icon: <BiBlock />,
+      description: `Unsere Taubenabwehrdienste schützen Ihr Gebäude vor Schäden und Verschmutzungen durch Vögel. Wir verwenden humane Methoden, um unerwünschte Gäste fernzuhalten.`,
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <section className="h-[105vh] relative text-white w-full bg-[var(--primary-color)]  rounded-b-[50px]">
+        <div className="flex flex-row flex-wrap w-full h-full  ">
+          <div className=" absolute z-[1] inset-0 overflow-hidden inline-flex flex-1 bg-[url('../../public/background_images/houses.jpg')] bg-cover bg-[100% auto]">
+            <div className="w-full h-full  bg-gradient-to-tr from-[var(--primary-color)]  to-transparent"></div>
+          </div>
+          <div className="inline-flex flex-1 items-center relative z-[2] justify-center">
+            <div className="px-4 sm:px-10 lg:px-32 max-w-[1000px] space-y-20 text-center">
+              <h1 className="font-notoSans mb-6">
+                {" "}
+                <b> Ihre Partner für den </b> <br /> <i> Rundum-Service </i>{" "}
+                <br /> <b> am Haus </b>
+              </h1>
+
+              <FadeInText>
+                <h4>
+                  Willkommen bei David Service, Ihrem Rundum-Partner für
+                  professionelle Hausmeister- und Gartenpflegedienste. Wir
+                  kümmern uns um alles, damit Sie es nicht müssen. Von der
+                  Winterdienstplanung bis zur fachgerechten Taubenabwehr –
+                  unsere Experten sind für Sie da. Unsere Mission ist es, Ihr
+                  Zuhause oder Ihr Geschäftsumfeld sauber, sicher und
+                  komfortabel zu gestalten. Verlassen Sie sich auf uns für
+                  höchste Qualität und Zuverlässigkeit.
+                </h4>
+              </FadeInText>
+
+              <BouncingButton />
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+        <img
+          src="/background_images/bottom_wave_white.svg"
+          className=" 
+         
+          h-20
+          lg:h-36
+        absolute 
+        -bottom-1
+        left-0
+        right-0
+        z-[5]
+        object-cover
+         
+        to-white
+        gradient
+        bg-no-repeat w-full"
+          style={{
+            objectPosition: "100% bottom",
+          }}
         />
+      </section>
+
+      <div className="bg-white font-bold   border-[var(--primary-color)] py-32 px-4 lg:px-28 text-center">
+        <h2 className="  text-[var(--primary-color)] uppercase">
+          <FadeInText>Unsere Dienstleistungen im Überblick</FadeInText>
+        </h2>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section className="  flex flex-col items-center      bg-[var(--primary-color)] ">
+        <img
+          src="/background_images/bottom_wave_white.svg"
+          className=" 
+          h-20
+          lg:h-36
+        relative
+        object-cover
+        bg-gradient-to-b
+        from-[var(--primary-color)]
+        via-[var(--primary-color)]
+        to-white
+        gradient
+        rotate-180
+        
+        bg-no-repeat w-full"
+          style={{
+            objectPosition: "100% bottom",
+          }}
+        />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="px-4 lg:px-28 py-24 space-y-28  ">
+          <div className="flex flex-col items-center  w-full ">
+            <h2 className="  mb-4 text-white  text-center max-w-[870px] leading-[1.5]">
+              {" "}
+              Mit unserer Erfahrung und einem echten Fokus auf
+              Kundenzufriedenheit können Sie sich bei Ihrem nächsten Auftrag auf
+              uns verlassen.{" "}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 w-full ">
+            {servicesData.map((service, index) => (
+              <AnimatedSeriveItem service={service} key={index} />
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <img
+        src="/background_images/bottom_wave_white.svg"
+        className=" 
+        h-20
+          lg:h-36
+        relative
+        object-cover
+        bg-gradient-to-b
+        from-[var(--primary-color)]
+        via-[var(--primary-color)]
+        to-white
+        gradient
+        bg-no-repeat w-full"
+        style={{
+          objectPosition: "100% bottom",
+        }}
+      />
+    </div>
+  );
 }
