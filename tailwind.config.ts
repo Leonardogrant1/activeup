@@ -17,17 +17,34 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        "slide-in": "slide-in .75s ease-out forwards",
-        "slide-out": "slide-out .75s ease-out forwards",
+        "slide-in-left": "slide-in-left .5s ease-out forwards",
+        "slide-out-left": "slide-out-left .5s ease-out forwards",
+        "slide-in-right": "slide-in-right .5s ease-out forwards",
+        "slide-out-right": "slide-out-right .5s ease-out forwards",
+        slide: "slide 28s infinite linear",
       },
       keyframes: {
-        "slide-in": {
-          "0%": { transform: "translateX(100%) translateY(-100%)" },
-          "100%": { transform: "translateX(-50%) translateY(0%)" },
+        "slide-in-left": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
         },
-        "slide-out": {
-          "0%": { transform: "translateX(-50%) translateY(0%)" },
-          "100%": { transform: "translateX(100%) translateY(-100%)" },
+        "slide-out-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+
+        "slide-in-right": {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        "slide-out-right": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+
+        slide: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
       },
     },

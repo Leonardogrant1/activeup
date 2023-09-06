@@ -9,7 +9,7 @@ export default function ScrollToContactButton() {
 
   return (
     <button
-      className="rounded-3xl text-[var(--primary-color)] bg-white transition-[background-color] hover:bg-transparent border-[2px] border-white   hover:text-white py-3 px-5 self-center text-lg "
+      className="rounded-full px-12 md:px-16 py-4 md:py-5 bg-black text-[#92d4e0] uppercase"
       onClick={() =>
         window.scrollTo({
           top: contactOffset,
@@ -17,8 +17,7 @@ export default function ScrollToContactButton() {
         })
       }
     >
-      {" "}
-      Jetzt kontaktieren{" "}
+      <h4 className="animate-pulse"> Get in touch </h4>
     </button>
   );
 }

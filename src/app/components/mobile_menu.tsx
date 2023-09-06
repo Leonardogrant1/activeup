@@ -17,19 +17,40 @@ export default function MobileMenu() {
     <div
       className={`fixed z-20 ${
         showMenu ? "flex" : "hidden"
-      }  bottom-0  w-full h-screen bg-opacity-30 p-4 `}
+      }  bottom-0  w-full h-full bg-opacity-30 p-4`}
     >
       <div
-        className={`w-[200%] h-[200%] bg-[var(--primary-color)] z-30 rounded-bl-full absolute top-0 bottom-0 left-0 right-0 ${
-          showBackground ? "animate-slide-in" : "animate-slide-out"
+        className={`w-full h-full flex flex-col bg-opacity-60 z-30   absolute top-0 bottom-0 left-0 right-0 ${
+          showBackground ? "animate-slide-in-right" : "animate-slide-out-right"
         } `}
         onAnimationEnd={(event: React.AnimationEvent) => {
-          if (event.animationName === "slide-out") {
+          if (event.animationName === "slide-out-right") {
             dispatch(toggleMenu());
             setShowBackground(true);
           }
         }}
-      ></div>
+      >
+        <div className="inline-flex flex-1"></div>
+
+        <div className="inline-flex flex-1 bg-black"></div>
+        <div className="inline-flex flex-1"></div>
+        <div className="inline-flex flex-1 bg-black"></div>
+        <div className="inline-flex flex-1"></div>
+        <div className="inline-flex flex-1 bg-black"></div>
+      </div>
+
+      <div
+        className={`w-full h-full flex flex-col bg-opacity-60 z-30   absolute top-0 bottom-0 left-0 right-0 ${
+          showBackground ? "animate-slide-in-left" : "animate-slide-out-left"
+        } `}
+      >
+        <div className="inline-flex flex-1 bg-black"></div>
+        <div className="inline-flex flex-1"></div>
+        <div className="inline-flex flex-1 bg-black"></div>
+        <div className="inline-flex flex-1"></div>
+        <div className="inline-flex flex-1 bg-black"></div>
+        <div className="inline-flex flex-1"></div>
+      </div>
 
       <IoIosClose
         className="absolute z-[32] top-4 right-4 text-white text-6xl "

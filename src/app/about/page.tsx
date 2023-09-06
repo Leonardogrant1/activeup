@@ -1,245 +1,220 @@
 import React from "react";
 
-import { BsPatchCheck } from "react-icons/bs";
-import { TbTargetArrow } from "react-icons/tb";
-import { PiPlant } from "react-icons/pi";
-import { BsEmojiSmile } from "react-icons/bs";
+import Image from "next/image";
 
-import ContactForm from "../components/contact_form";
-import FadeInText from "../components/fade-in-text";
-import AnimatedReasons from "../components/animated-reasons";
+import SlideInIcon from "../components/slide-in-icon";
 
 export default function Page() {
-  const servicesData = [
-    {
-      name: "Kompetenz",
-      icon: <BsPatchCheck className="text-4xl text-[var(--primary-color)] " />,
-      description: `Unsere Fachleute sind Experten auf ihrem Gebiet und setzen sich dafür ein, die besten Ergebnisse zu erzielen.`,
-    },
-    {
-      name: "Effizienz",
-      icon: <TbTargetArrow className="text-4xl text-[var(--primary-color)] " />,
-      description: `Wir arbeiten effizient, um Zeit und Ressourcen zu sparen, ohne die Qualität zu beeinträchtigen.`,
-    },
-    {
-      name: "Nachhaltigkeit",
-      icon: <PiPlant className="text-4xl text-[var(--primary-color)] " />,
-      description: `Wir setzen uns für umweltfreundliche Praktiken ein und tragen unseren Teil zum Schutz unserer Umwelt bei.`,
-    },
-    {
-      name: "Kundenzufriedenheit",
-      icon: <BsEmojiSmile className="text-4xl text-[var(--primary-color)] " />,
-      description: `Ihre Zufriedenheit hat oberste Priorität. Wir sind erst zufrieden, wenn Sie es sind.`,
-    },
-  ];
-
   return (
     <div>
-      <section className="h-[105vh] relative text-white w-full bg-[var(--primary-color)]  ">
-        <div className="flex flex-row flex-wrap w-full h-full bg-[url('../../public/background_images/houses.jpg')] xl:bg-none">
-          <div className="inline-flex flex-1 basis-[576px] items-center justify-center  bg-[#73c4c5b3]   xl:bg-none ">
-            <div className="px-4 sm:px-10 lg:px-32 space-y-7 text-center lg:text-start">
-              <h1 className=" font-notoSans ">
-                {" "}
-                <b> Herzlich </b> willkommen <br /> <i> bei </i>
-                <b> David Service </b>
+      <div className="px-3 lg:px-8 pb-8 pt-28 flex min-h-[146vh] w-full bg-[var(--primary-color)]">
+        <div className="flex flex-col w-full bg-[var(--primary-color)] min-h-[inherit] gap-5 p-[2px]">
+          <div className=" min-h-[120vh] inline-flex  flex-row gap-5">
+            <div className="hidden md:inline-flex flex-col justify-around flex-1 relative space-y-14 rounded-3xl">
+              {" "}
+              <SlideInIcon
+                translateFactorStart={-50}
+                translateFactorEnd={60}
+                rotateFactorStart={0}
+                rotateFactorEnd={30}
+              >
+                <img
+                  src="/background_images/instagram.png"
+                  alt="instagram"
+                  className="w-24 object-cover translate-y-24  "
+                />
+              </SlideInIcon>
+              <SlideInIcon
+                translateFactorStart={290}
+                translateFactorEnd={200}
+                rotateFactorStart={0}
+                rotateFactorEnd={30}
+              >
+                <img
+                  src="/background_images/twitter.png"
+                  alt="twitter"
+                  className="w-24 object-cover translate-y-28 "
+                />{" "}
+              </SlideInIcon>
+              <SlideInIcon
+                translateFactorStart={260}
+                translateFactorEnd={190}
+                rotateFactorStart={100}
+                rotateFactorEnd={5}
+              >
+                <img
+                  src="/background_images/linkedin.png"
+                  alt="linkedin"
+                  className="w-24 object-cover  "
+                />{" "}
+              </SlideInIcon>
+            </div>
+            <div className="inline-flex flex-[2] text-center flex-col justify-center items-center space-y-28  p-8 lg:p-12 bg-[var(--accent-color-1)] rounded-3xl">
+              <div className="inline-flex flex-col items-center space-y-9 ">
+                <h1 className="text-5xl md:text-8xl font-bold pb-9">
+                  {" "}
+                  Das ist <br /> ActiveUp.
+                </h1>
+                <img
+                  src="/gifs/giphy.gif"
+                  alt="social media"
+                  className="w-1/4 object-cover  "
+                />{" "}
+                <h2>
+                  Willkommen bei ActiveUp, deinem Partner für digitales
+                  Marketing und Online-Sichtbarkeit.
+                </h2>
+                <h3>
+                  {" "}
+                  Unsere Reise begann mit einer einfachen Idee: Wir wollten
+                  Unternehmen dabei helfen, im digitalen Zeitalter aufzustehen
+                  und aktiv zu werden.
+                </h3>
+              </div>
+
+              <button className="rounded-full px-16 py-5  bg-black text-[var(--accent-color-1)] uppercase">
+                <h4 className="animate-pulse"> Mehr Erfahren </h4>
+              </button>
+            </div>
+            <div className="hidden md:inline-flex flex-col justify-around flex-1 relative space-y-14 rounded-3xl">
+              {" "}
+              <SlideInIcon
+                translateFactorStart={140}
+                translateFactorEnd={60}
+                rotateFactorStart={70}
+                rotateFactorEnd={10}
+              >
+                <img
+                  src="/background_images/quality.png"
+                  alt="checkmark"
+                  className="w-24 object-cover  "
+                />{" "}
+              </SlideInIcon>
+              <SlideInIcon
+                translateFactorStart={-50}
+                translateFactorEnd={60}
+                rotateFactorStart={0}
+                rotateFactorEnd={30}
+              >
+                <img
+                  src="/background_images/facebook.png"
+                  alt="facebook"
+                  className="w-24 object-cover -translate-y-32  "
+                />{" "}
+              </SlideInIcon>
+              <SlideInIcon
+                translateFactorStart={150}
+                translateFactorEnd={60}
+                rotateFactorStart={0}
+                rotateFactorEnd={30}
+              >
+                <img
+                  src="/background_images/youtube.png"
+                  alt="youtube"
+                  className="w-24 object-cover -translate-y-32   "
+                />
+              </SlideInIcon>
+            </div>
+          </div>
+
+          <div className="inline-flex min-h-[50vh] flex-wrap flex-row w-full gap-5   text-center ">
+            <div className="flex-1 inline-flex basis-[466px] flex-col justify-center items-center min-h-[inherit]  space-y-9 bg-[var(--accent-color-2)] rounded-3xl p-6">
+              <h1 className="font-bold">Fachwissen und Erfahrung</h1>
+              <h4 className="font-semibold">
+                Unser Team von Experten bringt jahrelange Erfahrung im
+                Digitalmarketing und SEO mit und bleibt stets auf dem neuesten
+                Stand der Branche.
+              </h4>
+            </div>
+            <div className="flex-1 inline-flex basis-[466px]  min-h-[inherit] flex-col justify-center items-center break-words space-y-9  bg-[#f3f3d4] rounded-3xl  p-6">
+              <h1 className="font-bold hyphens-auto">
+                Maßgeschneiderte Lösungen
               </h1>
-
-              <FadeInText>
-                <h4>
-                  Ihrem kompetenten, effizienten und freundlichen Partner für
-                  umfassende Haus- und Gartenpflegedienste. Unsere Mission
-                  reicht weit über Dienstleistungen hinaus. Wir sind hier, um
-                  gemeinsam mit Ihnen einen besseren Lebensraum zu schaffen, der
-                  nicht nur ästhetisch ansprechend, sondern auch funktional und
-                  komfortabel ist.
-                </h4>
-              </FadeInText>
+              <h4 className="font-semibold">
+                Wir entwickeln individuelle Strategien, die genau auf die
+                Bedürfnisse unserer Kunden zugeschnitten sind - keine
+                Einheitslösungen.
+              </h4>
+            </div>
+            <div className="flex-1 inline-flex basis-[466px] space-y-9   min-h-[inherit] flex-col justify-center items-center bg-[var(--accent-color-3)] rounded-3xl  p-6">
+              <h1 className="font-bold">Partnerschaftliche Zusammenarbeit</h1>
+              <h4 className="font-semibold">
+                Wir betrachten unsere Kunden als Partner, arbeiten eng mit ihnen
+                zusammen und legen Wert auf Transparenz und Vertrauen in unseren
+                Beziehungen.
+              </h4>
             </div>
           </div>
-          <div className=" relative hidden overflow-hidden xl:inline-flex flex-1 basis-[576px] bg-[url('../../public/background_images/houses.jpg')]">
-            <div
-              className="absolute left-0 bottom-0 top-0 w-44  bg-[url('../../public/background_images/side_waves.svg')] "
-              style={{
-                backgroundPositionY: "100%",
-                backgroundSize: "cover",
-                backgroundPositionX: "0%",
-              }}
-            >
-              {" "}
+
+          <div className="inline-flex  flex-wrap   min-h-[60vh]  flex-row w-full gap-5   ">
+            <div className="flex-1 basis-[350px]   min-h-[inherit] bg-[#d2f7dc] rounded-3xl"></div>
+            <div className="flex-[2] basis-[965px]  min-h-[inherit] inline-flex py-32 md:px-32 justify-center flex-col space-y-9  text-white   rounded-3xl">
+              <h2> Unsere Anfänge </h2>
+              <h4 className="max-w-[650px]">
+                ActiveUp wurde von einer Gruppe leidenschaftlicher
+                Digitalmarketing-Experten gegründet, die die rasante Entwicklung
+                der Online-Welt hautnah miterlebten. Wir sahen die Chancen und
+                Herausforderungen, die diese neue Ära mit sich brachte, und
+                beschlossen, unser Wissen und unsere Fähigkeiten zu bündeln, um
+                anderen zum Erfolg zu verhelfen. Unsere Reise begann klein, aber
+                unsere Ambitionen waren groß. Wir glaubten daran, dass jedes
+                Unternehmen, unabhängig von seiner Größe oder seinem Budget, die
+                Möglichkeit haben sollte, in der digitalen Welt zu glänzen. Das
+                war der Beginn von ActiveUp.
+              </h4>
             </div>
           </div>
-        </div>
-        <img
-          src="/background_images/bottom_wave_white.svg"
-          className=" 
-          h-20
-          lg:h-36
-        absolute
-        -bottom-1
-        left-0 
-        right-0
-        object-cover
-         
-         
-        bg-no-repeat w-full"
-          style={{
-            objectPosition: "100% bottom",
-          }}
-        />
-      </section>
 
-      <section className="py-20 px-4 lg:px-28 flex flex-col space-y-24">
-        <div className="flex flex-col space-y-5">
-          <FadeInText>
-            <h2 className=" text-[var(--primary-color)] uppercase text-center">
-              Was uns ausmacht
+          <div className="inline-flex  flex-wrap-reverse  min-h-[60vh]  flex-row w-full gap-5   ">
+            <div className="flex-[2] basis-[965px]  min-h-[inherit] inline-flex py-32 md:px-32 justify-center flex-col space-y-9   text-white rounded-3xl">
+              <h2> Unsere Mission </h2>
+              <h4 className="max-w-[650px]">
+                Unsere Mission ist es, die digitale Präsenz unserer Kunden zu
+                stärken, ihre Reichweite zu maximieren und messbare Ergebnisse
+                zu liefern. Wir setzen auf bewährte Methoden wie die Schaltung
+                von Facebook Ads, die Kraft des Suchmaschinenmarketings (SEO)
+                und die Erstellung überzeugender Landing Pages. <br /> <br />
+                Als SEO-Experten wissen wir, dass Sichtbarkeit in den
+                Suchmaschinen der Schlüssel zum Erfolg ist. Aber wir sind mehr
+                als nur Experten - wir sind Partner. Wir arbeiten eng mit
+                unseren Kunden zusammen, um maßgeschneiderte Strategien zu
+                entwickeln und die einzigartige Identität ihres Unternehmens
+                hervorzuheben.
+              </h4>
+            </div>
+            <div className="flex-1 basis-[350px]  min-h-[inherit] bg-[#d2f7dc] rounded-3xl"></div>
+          </div>
+
+          <div className="inline-flex flex-wrap  min-h-[60vh]  flex-row w-full gap-5  ">
+            <div className="flex-1 basis-[350px]  min-h-[inherit] bg-[#d2f7dc] rounded-3xl"></div>
+            <div className="flex-[2] basis-[965px]  min-h-[inherit] inline-flex py-32 md:px-32 justify-center flex-col space-y-9   text-white rounded-3xl">
+              <h2> Unsere Verpflichtung </h2>
+              <h4 className="max-w-[650px]">
+                Wir sind stolz auf unsere Verpflichtung zur Transparenz,
+                Integrität und Exzellenz. Bei ActiveUp geht es nicht nur darum,
+                Ergebnisse zu erzielen, sondern auch darum, langfristige
+                Partnerschaften aufzubauen. Wir glauben an den Erfolg unserer
+                Kunden, und unser Erfolg wird daran gemessen, wie gut wir ihnen
+                helfen, ihre Ziele zu erreichen. <br /> <br />
+                Wenn du bereit bist, aktiv zu werden und deine digitale Präsenz
+                zu stärken, dann bist du bei ActiveUp genau richtig. Wir freuen
+                uns darauf, mit dir zusammenzuarbeiten und deine digitale
+                Erfolgsgeschichte zu schreiben.
+              </h4>
+            </div>
+          </div>
+
+          <div className="inline-flex bg-[var(--accent-color-2)] rounded-3xl space-y-12 items-center py-9 px-3 md:px-20 text-center  justify-center min-h-[18vh]  flex-col w-full   ">
+            <h2 className="font-bold">
+              Bereit, aktiv zu werden? Kontaktiere uns noch heute, und lass uns
+              gemeinsam starten!
             </h2>
-          </FadeInText>
-        </div>
-
-        <div className="flex flex-row justify-center flex-wrap gap-24">
-          {servicesData.map((service) => (
-            <div className="inline-flex max-w-[500px]">
-              <AnimatedReasons>
-                <div className=" flex flex-col items-center space-y-9 ">
-                  {service.icon}
-
-                  <div className="flex flex-col items-center space-y-9">
-                    <h4 className=" font-bold text-[var(--primary-color)] uppercase">
-                      {" "}
-                      {service.name}{" "}
-                    </h4>
-                    <p className="text-center">{service.description}</p>
-                  </div>
-                </div>
-              </AnimatedReasons>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="h-screen text-white w-full bg-[var(--primary-color)] relative ">
-        <div className="flex flex-row flex-wrap w-full h-full">
-          <div className=" relative  hidden overflow-hidden lg:inline-flex flex-1 bg-[url('../../public/background_images/houses.jpg')]">
-            <div
-              className="absolute  right-0 rotate-180 bottom-0 top-0 w-44 bg-[url('../../public/background_images/side_waves.svg')] "
-              style={{
-                backgroundPositionY: "100%",
-                backgroundSize: "cover",
-                backgroundPositionX: "0%",
-              }}
-            >
-              {" "}
-            </div>
+            <button className="rounded-full px-16 py-5 bg-black text-[var(--accent-color-2)]  uppercase">
+              <h4 className="animate-pulse"> Get in touch </h4>
+            </button>
           </div>
-          <div className="inline-flex flex-1 items-center justify-center">
-            <div className="px-4 sm:px-10 md:px-20 xl:px-32 space-y-14 text-center lg:text-start ">
-              <div className=" space-y-7 ">
-                <FadeInText>
-                  <h1 className="  font-notoSans mb-6">
-                    {" "}
-                    <b> Unsere </b> <i> Vision </i>
-                  </h1>
-                </FadeInText>
-
-                <FadeInText>
-                  <h4>
-                    Unsere Vision ist es, Ihr Zuhause oder Ihre
-                    Geschäftsimmobilie in einen Ort der Freude und des Komforts
-                    zu verwandeln. Wir glauben daran, dass jedes Anwesen,
-                    unabhängig von seiner Größe oder Form, das Potenzial hat,
-                    ein harmonischer und einladender Raum zu sein. Unsere
-                    Dienstleistungen sind darauf ausgerichtet, dieses Potenzial
-                    zu entfalten und Ihren Lebensraum aufzuwerten.
-                  </h4>
-                </FadeInText>
-              </div>
-
-              <div className="space-y-7">
-                <FadeInText>
-                  <h1 className="  font-notoSans ">
-                    {" "}
-                    <b> Unsere </b> <i> Mission </i>
-                  </h1>
-                </FadeInText>
-                <FadeInText>
-                  <h4>
-                    Unsere Mission ist es, Ihre Erwartungen zu übertreffen. Wir
-                    sind ein Team von Profis, das sich der Qualität,
-                    Zuverlässigkeit und Ihrem Wohlbefinden verpflichtet fühlt.
-                    Wir möchten nicht nur Ihre Immobilie pflegen, sondern auch
-                    Ihren Alltag erleichtern. Wir schaffen Räume, in denen Sie
-                    sich wohl und glücklich fühlen können.
-                  </h4>
-                </FadeInText>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <img
-          src="/background_images/bottom_wave_white.svg"
-          className=" 
-          h-20
-          lg:h-36
-        absolute
-        -bottom-1
-        left-0 
-        right-0
-        object-cover
-         
-         
-        bg-no-repeat w-full"
-          style={{
-            objectPosition: "100% bottom",
-          }}
-        />
-
-        <img
-          src="/background_images/bottom_wave_white.svg"
-          className=" 
-          h-20
-          lg:h-36
-        absolute
-        -top-1
-        left-0 
-        right-0
-        object-cover
-         rotate-180
-         
-        bg-no-repeat w-full"
-          style={{
-            objectPosition: "100% bottom",
-          }}
-        />
-      </section>
-
-      <div className="bg-white px-4 sm:px-10 lg:px-32 ">
-        <div className="py-32   space-y-20  flex flex-col items-center  text-center">
-          <FadeInText>
-            <h2 className=" text-[var(--primary-color)] uppercase font-bold">
-              {" "}
-              Kontaktieren Sie uns
-            </h2>
-          </FadeInText>
-          <FadeInText>
-            <p className="max-w-[880px]">
-              {" "}
-              Wir sind bereit, Ihr Zuhause oder Geschäftsumfeld in einen Ort der
-              Exzellenz zu verwandeln. Kontaktieren Sie uns noch heute, um mehr
-              darüber zu erfahren, wie David Service Ihnen helfen kann. Wir
-              freuen uns darauf, Sie kennenzulernen und Ihnen unsere
-              erstklassigen Dienstleistungen anzubieten. Willkommen bei David
-              Service, wo Qualität und Service zuhause sind, und wo wir
-              gemeinsam an der Schaffung eines besseren Lebensraums für Sie
-              arbeiten.{" "}
-            </p>
-          </FadeInText>
         </div>
       </div>
-
-      <ContactForm request />
     </div>
   );
 }

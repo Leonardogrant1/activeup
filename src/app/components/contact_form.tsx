@@ -63,7 +63,6 @@ export default function ContactForm({ request }: Props) {
 
     alert(JSON.stringify(data));
 
-    return;
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -174,7 +173,7 @@ export default function ContactForm({ request }: Props) {
           <section className="v w-full ">
             <div className="w-full h-[70vh]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.1861587908957!2d8.254452576924317!3d50.064075215107856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bdbdf2b0924007%3A0xb407e1566db2db02!2sHasengartenstra%C3%9Fe%2020K%2C%2065189%20Wiesbaden!5e0!3m2!1sde!2sde!4v1692191640662!5m2!1sde!2sde"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.335260070027!2d8.262809712490082!3d50.023813417871615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd964e09a647fd%3A0xb63fb1a9aa0fe2c6!2sBiebricher%20Str.%207F%2C%2055252%20Wiesbaden!5e0!3m2!1sde!2sde!4v1693581065654!5m2!1sde!2sde"
                 className="border-0 w-full h-full"
                 allowFullScreen
                 loading="lazy"
@@ -190,39 +189,8 @@ export default function ContactForm({ request }: Props) {
   };
 
   return (
-    <div
-      ref={contactForm}
-      className="relative bg-[url('../../public/background_images/houses.jpg')]"
-    >
-      <img
-        src="/background_images/bottom_wave_white.svg"
-        className=" 
-        h-20
-          lg:h-36
-        absolute
-        object-cover
-
-        -top-1
-        left-0
-        right-0
-        
-        rotate-180
-        
-        bg-no-repeat w-full"
-        style={{
-          objectPosition: "100% bottom",
-        }}
-      />
-      <section className="flex flex-col space-y-12 items-center py-48 bg-[var(--primary-color)] mx-4 m:mx-10 lg:mx-32 ">
-        {request ? (
-          <h2 className="text-white text-center uppercase">
-            {" "}
-            Setze Sie sich mit uns in Verbindung{" "}
-          </h2>
-        ) : (
-          <h1 className="text-white text-center uppercase"> Kontakt </h1>
-        )}
-
+    <div ref={contactForm} className="relative">
+      <section className="flex flex-col space-y-12 items-center py-28 bg-[var(--primary-color)] mx-4 m:mx-10 lg:mx-32 ">
         <div className="flex flex-row text-white gap-5">
           <div
             onClick={() =>
@@ -234,7 +202,7 @@ export default function ContactForm({ request }: Props) {
           >
             <VscMail className="  text-3xl mr-[2px] ml-[3px]" />
 
-            <p className="hidden md:flex"> info@david-service.de </p>
+            <p className="hidden md:flex"> info@activeup.com </p>
           </div>
           <div
             onClick={() =>
@@ -248,7 +216,7 @@ export default function ContactForm({ request }: Props) {
 
             <p className="hidden md:flex">
               {" "}
-              Hasengartenstraße 20k, 65197 Wiesbaden{" "}
+              Biebricherstraße 7F, 55252 Mainz Kastel
             </p>
           </div>
           <div
@@ -261,27 +229,12 @@ export default function ContactForm({ request }: Props) {
           >
             <AiOutlinePhone className="  text-3xl mr-[2px] ml-[3px]" />
 
-            <p className="hidden md:flex"> 017622642535 </p>
+            <p className="hidden md:flex"> 015203360004 </p>
           </div>
         </div>
 
         {loadContent(selectedMethod)}
       </section>
-      <img
-        src="/background_images/bottom_wave_white.svg"
-        className=" 
-        h-20
-          lg:h-36
-        absolute
-        object-cover
-        -bottom-1
-        left-0 
-        right-0
-        bg-no-repeat w-full"
-        style={{
-          objectPosition: "100% bottom",
-        }}
-      />
     </div>
   );
 }

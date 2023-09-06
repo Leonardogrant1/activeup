@@ -1,174 +1,127 @@
 import React from "react";
 
-import { FaHome, FaTrash, FaShieldAlt, FaTree } from "react-icons/fa";
-import { PiPlanetFill } from "react-icons/pi";
-import { RiVipDiamondFill } from "react-icons/ri";
-import { SiStackblitz } from "react-icons/si";
-import { BiBlock } from "react-icons/bi";
-import { ImArrowDown2 } from "react-icons/im";
-import AnimatedSeriveItem from "./components/animated_service_item";
-import FadeInText from "./components/fade-in-text";
-import BouncingButton from "./components/bouncing-button";
+import { TbNotebook, TbSeo } from "react-icons/tb";
+import { CgWebsite } from "react-icons/cg";
+
+import Image from "next/image";
+import { BsFillPlayFill } from "react-icons/bs";
+import Link from "next/link";
+
+export const metadata = {
+  title: "ActiveUp - Ihr kompetenter Partner für Digitales Marketing",
+  description:
+    "Datenschutzerklärung von David Service, Ihren vertrauenswürdigen Partner für Hausmeisterdienste, Schädlingsbekämpfung, Müllmanagement, Winterdienst, Gartenpflege und mehr.",
+};
 
 export default function Page() {
   const servicesData = [
     {
-      name: "Hausmeisterservice",
-      icon: <FaHome />,
-      description: `Unser Hausmeisterservice kümmert sich um die Pflege und Instandhaltung Ihrer Immobilie. Von der Reparatur kleinerer Defekte bis zur regelmäßigen Reinigung – wir sind Ihr zuverlässiger Partner für alle Anliegen rund um Ihr Zuhause.`,
+      name: "Entwicklung einer modernen Webseite",
+      descriptive_name: "Kreative Meisterwerke für deinen Online-Auftritt",
+      icon: <CgWebsite />,
+      path: "/gifs/webdesign.gif",
+      description: `Deine Webseite ist der erste Eindruck, den Kunden von deinem Unternehmen bekommen. Wir nehmen das sehr ernst. Unsere Teams von Design-Visionären und Copywritern kreieren Webseiten , die nicht nur gut aussehen, sondern auch fesselnd, intuitiv sind und konvertieren. Lass uns gemeinsam deine digitale Visitenkarte in ein Kunstwerk verwandeln, das Kunden überzeugt und begeistert.`,
     },
+
     {
-      name: "Müllmanagment",
-      icon: <FaTrash />,
-      description: `Unser Müllmanagement-Service sorgt für die effiziente Entsorgung und Trennung von Abfällen. Wir arbeiten daran, Umweltauswirkungen zu minimieren und Ihre Umgebung sauber und nachhaltig zu gestalten.`,
+      name: "SEO",
+      descriptive_name: "Dominiere die Suchergebnisse",
+
+      icon: <TbNotebook />,
+      path: "/gifs/writing.gif",
+
+      description: `In der digitalen Welt ist Sichtbarkeit der Schlüssel zum Erfolg. Unsere SEO-Optimierungsdienste sind der Turbo für deine Online-Präsenz. Wir setzen auf erstklassige Strategien und bahnbrechende SEO-Techniken, um sicherzustellen, dass deine Marke an der Spitze der Suchergebnisse steht. Wir bringen dich dahin, wo Kunden nach dir suchen. Mach dich bereit für den digitalen Durchbruch.`,
     },
+
     {
-      name: "Winterdienst",
-      icon: <FaShieldAlt />,
-      description: `Unser Winterdienst stellt sicher, dass Ihr Grundstück sicher und zugänglich bleibt, selbst bei den strengsten Wetterbedingungen. Schnee und Eis werden von unseren Fachleuten fachgerecht beseitigt.`,
-    },
-    {
-      name: "Gartenpflege",
-      icon: <PiPlanetFill />,
-      description: `Unsere Gartenpflege-Experten kümmern sich um Ihre Grünanlagen. Wir gestalten und pflegen Gärten, damit Sie sich in Ihrer grünen Oase wohlfühlen können.`,
-    },
-    {
-      name: "Außenreinigung",
-      icon: <FaTree />,
-      description: `Unsere Außenreinigungsdienste sorgen für eine makellose Fassade und saubere Außenbereiche. Wir entfernen Schmutz und Ablagerungen, um den Wert Ihrer Immobilie zu erhalten.`,
-    },
-    {
-      name: "Innenreinigung",
-      icon: <RiVipDiamondFill />,
-      description: `Unsere Innenreinigungsexperten kümmern sich um Sauberkeit und Hygiene in Ihrem Zuhause oder Geschäft. Wir sorgen dafür, dass jeder Raum strahlend sauber ist.`,
-    },
-    {
-      name: "PV-Anlage Nanoversieglung",
-      icon: <SiStackblitz />,
-      description: `Unsere PV-Anlagen Nanoversieglung maximiert die Leistung Ihrer Solaranlagen und minimiert Wartungsaufwand. Mit modernster Nanotechnologie schützen wir Ihre Paneele vor Verschmutzung, was zu höherer Energieerzeugung und langfristigen Einsparungen führt.`,
-    },
-    {
-      name: "Taubenabwehr",
-      icon: <BiBlock />,
-      description: `Unsere Taubenabwehrdienste schützen Ihr Gebäude vor Schäden und Verschmutzungen durch Vögel. Wir verwenden humane Methoden, um unerwünschte Gäste fernzuhalten.`,
+      name: "Analytics",
+      descriptive_name: "Daten, die deinem Erfolg den Weg weisen",
+
+      icon: <TbSeo />,
+      path: "/gifs/seo.gif",
+
+      description: `Daten sind der Schlüssel zur Macht in der digitalen Ära. Wir sind deine Daten-Experten. Wir sammeln nicht nur Informationen, sondern gestalten damit deinen Weg zum Erfolg. Unsere Analysetools enthüllen das Verhalten deiner Webseitenbesucher und machen deine Online-Performance klar und messbar.
+
+      Wir sind mehr als Beobachter - wir sind Gestalter. Mit unseren strategischen Analysen planen wir die nächsten Schritte, damit du Chancen erkennst, deine Strategie optimierst und dein Wachstum verfolgen kannst. Wir sind die Brücke zwischen Daten und Aktion, und wir bringen dich und dein Geschäft auf das nächste Level.`,
     },
   ];
 
   return (
-    <div>
-      <section className="h-[105vh] relative text-white w-full bg-[var(--primary-color)]  rounded-b-[50px]">
-        <div className="flex flex-row flex-wrap w-full h-full  ">
-          <div className=" absolute z-[1] inset-0 overflow-hidden inline-flex flex-1 bg-[url('../../public/background_images/houses.jpg')] bg-cover bg-[100% auto]">
-            <div className="w-full h-full  bg-gradient-to-tr from-[var(--primary-color)]  to-transparent"></div>
+    <div className=" px-3 lg:px-8 pb-8 pt-28 flex min-h-[140vh] w-full  ">
+      <div className="flex flex-col w-full min-h-[inherit] [var(--primary-color)] h-full gap-5 p-[2px]">
+        <div className="flex-[2] flex-wrap inline-flex flex-row gap-5">
+          <div className="inline-flex flex-[2]  basis-[780px] flex-col justify-center items-center text-center md:text-start md:items-start space-y-9  p-8 lg:p-12 bg-[#92d4e0] rounded-3xl">
+            <h1 className="top-header">
+              Next Level <br /> Digital Marketing{" "}
+            </h1>
+
+            <Link href="/contact" scroll>
+              <button className="rounded-full px-16 py-5 bg-[var(--primary-color)] text-[#92d4e0] uppercase">
+                <h4 className="animate-pulse"> Get in touch </h4>
+              </button>
+            </Link>
           </div>
-          <div className="inline-flex flex-1 items-center relative z-[2] justify-center">
-            <div className="px-4 sm:px-10 lg:px-32 max-w-[1000px] space-y-20 text-center">
-              <h1 className="font-notoSans mb-6">
+          <div className="inline-flex flex-1 basis-[355px] relative bg-white rounded-3xl overflow-hidden">
+            <video
+              autoPlay
+              loop
+              src="/background_video/0901.mp4"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div className="inline-flex flex-wrap flex-1 flex-row w-full gap-5">
+          <div className="flex-[2] basis-[474px] flex flex-col justify-between  items-start  rounded-3xl gap-7">
+            <div className=" flex flex-row space-x-5 items-center mt-8">
+              <button className="bg-white rounded-full aspect-square w-10 inline-flex justify-center items-center">
+                <BsFillPlayFill />
+              </button>
+              <h4 className="text-white">
+                Find Out <br /> More About Us
+              </h4>
+            </div>
+
+            <div className="flex flex-col space-y-4 items-start">
+              <Link href="/services/social_media_marketing" scroll>
+                <button className="px-6 py-3  border-white rounded-3xl border-[2px] text-white">
+                  <h3>Social Media Advertisment</h3>
+                </button>
+              </Link>
+              <Link href="/services/website" scroll>
+                <button className="px-6 py-3 border-white rounded-3xl border-[2px] text-white">
+                  <h3>Webdesign / Webdevelopment</h3>
+                </button>
+              </Link>
+
+              <Link href="/services/seo" scroll>
+                <button className="px-6 py-3 border-white rounded-3xl border-[2px] text-white">
+                  <h3>SEO and Analytics</h3>
+                </button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="inline-flex flex-1 basis-[630px] flex-wrap gap-5 ">
+            <div className="flex-1 basis-[301px] bg-[var(--accent-color-2)] p-8 font-bold rounded-3xl uppercase inline-flex flex-col justify-between aspect-[6/5]">
+              <h3>
                 {" "}
-                <b> Ihre Partner für den </b> <br /> <i> Rundum-Service </i>{" "}
-                <br /> <b> am Haus </b>
-              </h1>
+                Unique <br /> Business Solutions
+              </h3>
 
-              <FadeInText>
-                <h4>
-                  Willkommen bei David Service, Ihrem Rundum-Partner für
-                  professionelle Hausmeister- und Gartenpflegedienste. Wir
-                  kümmern uns um alles, damit Sie es nicht müssen. Von der
-                  Winterdienstplanung bis zur fachgerechten Taubenabwehr –
-                  unsere Experten sind für Sie da. Unsere Mission ist es, Ihr
-                  Zuhause oder Ihr Geschäftsumfeld sauber, sicher und
-                  komfortabel zu gestalten. Verlassen Sie sich auf uns für
-                  höchste Qualität und Zuverlässigkeit.
-                </h4>
-              </FadeInText>
+              <div className=" w-12 md:w-20 aspect-square relative self-end">
+                <Image fill src="/background_images/unique.png" alt="unique" />
+              </div>
+            </div>
 
-              <BouncingButton />
+            <div className="flex-1 basis-[301px] bg-[var(--accent-color-1)]  flex-col p-8 font-bold  inline-flex justify-between rounded-3xl aspect-[6/5] ">
+              <h3 className="uppercase">Grow your Brand And Revenue By</h3>
+
+              <div className="self-end text-6xl md:text-9xl">5x</div>
             </div>
           </div>
         </div>
-        <img
-          src="/background_images/bottom_wave_white.svg"
-          className=" 
-         
-          h-20
-          lg:h-36
-        absolute 
-        -bottom-1
-        left-0
-        right-0
-        z-[5]
-        object-cover
-         
-        to-white
-        gradient
-        bg-no-repeat w-full"
-          style={{
-            objectPosition: "100% bottom",
-          }}
-        />
-      </section>
-
-      <div className="bg-white font-bold   border-[var(--primary-color)] py-32 px-4 lg:px-28 text-center">
-        <h2 className="  text-[var(--primary-color)] uppercase">
-          <FadeInText>Unsere Dienstleistungen im Überblick</FadeInText>
-        </h2>
       </div>
-
-      <section className="  flex flex-col items-center      bg-[var(--primary-color)] ">
-        <img
-          src="/background_images/bottom_wave_white.svg"
-          className=" 
-          h-20
-          lg:h-36
-        relative
-        object-cover
-        bg-gradient-to-b
-        from-[var(--primary-color)]
-        via-[var(--primary-color)]
-        to-white
-        gradient
-        rotate-180
-        
-        bg-no-repeat w-full"
-          style={{
-            objectPosition: "100% bottom",
-          }}
-        />
-
-        <div className="px-4 lg:px-28 py-24 space-y-28  ">
-          <div className="flex flex-col items-center  w-full ">
-            <h2 className="  mb-4 text-white  text-center max-w-[870px] leading-[1.5]">
-              {" "}
-              Mit unserer Erfahrung und einem echten Fokus auf
-              Kundenzufriedenheit können Sie sich bei Ihrem nächsten Auftrag auf
-              uns verlassen.{" "}
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 w-full ">
-            {servicesData.map((service, index) => (
-              <AnimatedSeriveItem service={service} key={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <img
-        src="/background_images/bottom_wave_white.svg"
-        className=" 
-        h-20
-          lg:h-36
-        relative
-        object-cover
-        bg-gradient-to-b
-        from-[var(--primary-color)]
-        via-[var(--primary-color)]
-        to-white
-        gradient
-        bg-no-repeat w-full"
-        style={{
-          objectPosition: "100% bottom",
-        }}
-      />
     </div>
   );
 }
