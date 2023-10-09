@@ -17,7 +17,7 @@ export default function ScrollToContactButton() {
         })
       }
     >
-      <h4 className="animate-pulse"> Get in touch </h4>
+      <h4 className="animate-pulse"> Jetzt Kontaktieren </h4>
     </button>
   );
 }

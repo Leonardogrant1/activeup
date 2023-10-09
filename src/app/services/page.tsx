@@ -63,7 +63,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className=" min-h-[50vh] flex-wrap  inline-flex flex-row gap-5">
+        {/* <div className=" min-h-[50vh] flex-wrap  inline-flex flex-row gap-5">
           <div className="inline-flex min-h-[inherit] flex-[2] basis-[905px] flex-col justify-center  text-center md:text-start items-center md:items-start space-y-9  p-8 md:p-12 bg-[var(--accent-color-2)] rounded-3xl   ">
             <h1 className=" service-header">
               Such&shy;maschinen Opti&shy;mierung
@@ -83,7 +83,7 @@ export default function Page() {
               objectFit="contain"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

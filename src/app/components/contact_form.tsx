@@ -202,7 +202,7 @@ export default function ContactForm({ request }: Props) {
           >
             <VscMail className="  text-3xl mr-[2px] ml-[3px]" />
 
-            <p className="hidden md:flex"> info@activeup.com </p>
+            <p className="hidden md:flex"> info@activeupmedia.com </p>
           </div>
           <div
             onClick={() =>

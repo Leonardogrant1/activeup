@@ -26,8 +26,8 @@ export default function ProjectDetail({ params: { service } }: Params) {
       return <Website />;
     case "social_media_marketing":
       return <SocialsMedia />;
-    case "seo":
-      return <SEO />;
+    // case "seo":
+    //   return <SEO />;
     default:
       return <div>Not found</div>;
   }
