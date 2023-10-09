@@ -61,7 +61,10 @@ export default function Expandable({ service, index }: Props) {
         >
           <div className="flex gap-1 flex-col space-y-1  overflow-hidden mb-2">
             {service.sub_points.map((point) => (
-              <div className="flex flex-row items-center gap-2 pr-10  ">
+              <div
+                key={point}
+                className="flex flex-row items-center gap-2 pr-10  "
+              >
                 <GiCheckMark className="text-white text-sm min-w-[14px]  " />
 
                 <p className="text-sm"> {point} </p>
