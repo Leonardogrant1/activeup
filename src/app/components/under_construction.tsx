@@ -7,7 +7,7 @@ export default function UnderConstruction() {
       <div className="relative w-64 aspect-[500/130]">
         <Image src="/logo_white.svg" alt="ActiveUp Media" fill priority />
       </div>
-      <div className="flex flex-col space-y-8 items-center justify-center">
+      <div className="flex flex-col space-y-8 items-center text-center justify-center">
         <LuConstruction className="text-5xl" />
         <h1 className="text-4xl font-bold mb-4">Website in Bearbeitung</h1>
         <p className="text-lg mb-4">
