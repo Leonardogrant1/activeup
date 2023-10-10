@@ -5,6 +5,7 @@ import { Header } from "./components/header";
 import Footer from "./components/footer";
 import ReduxProvider from "@/redux/provider";
 import MobileMenu from "./components/mobile_menu";
+import UnderConstruction from "./components/under_construction";
 
 const nunito_sans = Nunito_Sans({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito_sans.className}>
+        <UnderConstruction />
         <ReduxProvider>
           <Header />
 

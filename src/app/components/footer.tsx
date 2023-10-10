@@ -50,7 +50,7 @@ export default function Footer() {
                 <li>
                   <div className="flex flex-row items-center space-x-3">
                     <VscMail className=" text-base mr-[2px] ml-[3px]" />
-                    <p> info@activeup.com </p>
+                    <p> info@activeupmedia.com </p>
                   </div>
                 </li>
 

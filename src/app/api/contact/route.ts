@@ -8,17 +8,17 @@ export async function POST(request: NextRequest) {
     service: "gmail",
 
     auth: {
-      user: "leonardogranetto.business@gmail.com",
-      pass: "tyyuujoukbcwmxin",
+      user: "info@activeupmedia.com",
+      pass: "qerffcfpnbasjjro",
     },
   });
 
   try {
     await transporter.sendMail({
       from: email,
-      to: "leonardogranetto.business@gmail.com",
+      to: "info@activeupmedia.com",
       replyTo: email,
-      subject: "Neue Anfrage! ActiveNow Media",
+      subject: "Neue Anfrage! ActiveUp Media",
       html: `
         <h4>Name: ${name} </h4>
         <h4>Email: ${email} </h4>
