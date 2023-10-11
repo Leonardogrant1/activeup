@@ -22,6 +22,8 @@ const config: Config = {
         "slide-in-right": "slide-in-right .5s ease-out forwards",
         "slide-out-right": "slide-out-right .5s ease-out forwards",
         slide: "slide 28s infinite linear",
+
+        "spin-slow": "spin 3s linear infinite",
       },
       keyframes: {
         "slide-in-left": {
