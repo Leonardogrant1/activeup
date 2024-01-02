@@ -1,10 +1,8 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import nodemailer from "nodemailer";
 
-import { FacebookConversionsAPI } from "../../../../fb_conversions_api";
-
 export async function POST(request: NextRequest) {
-  const { name, email, phone, message } = await request.json();
+  const { name, email, message } = await request.json();
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -28,16 +26,9 @@ export async function POST(request: NextRequest) {
         `,
     });
 
-    await FacebookConversionsAPI.triggerContactEvent(
-      name,
-      name,
-      email,
-      phone,
-      request
-    );
     return new Response("OK", { status: 200 });
   } catch (e) {
-    console.log(JSON.stringify(e));
+    console.log(e);
 
     return new Response(
       "Could not send the email. Your message was not sent.",

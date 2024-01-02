@@ -3,7 +3,6 @@ import React from "react";
 import { Metadata } from "next";
 import Website from "@/app/components/service_details/website";
 import SocialsMedia from "@/app/components/service_details/social_media";
-import SEO from "@/app/components/service_details/seo";
 
 type Params = {
   params: {

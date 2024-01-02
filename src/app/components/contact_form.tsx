@@ -59,6 +59,7 @@ export default function ContactForm({ request }: Props) {
       name: fullname,
       email: email,
       message: message,
+      phone: phone,
     };
 
     alert(JSON.stringify(data));

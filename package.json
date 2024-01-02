@@ -14,6 +14,7 @@
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.5",
     "@reduxjs/toolkit": "^1.9.5",
+    "@types/facebook-nodejs-business-sdk": "^15.0.2",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
@@ -21,7 +22,9 @@
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.16",
+    "facebook-nodejs-business-sdk": "^18.0.1",
     "framer-motion": "^10.16.0",
+    "luxon": "^3.4.3",
     "next": "13.4.16",
     "nodemailer": "^6.9.4",
     "postcss": "8.4.27",
@@ -29,10 +32,13 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "react-redux": "^8.1.2",
+    "sha256": "^0.2.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@types/nodemailer": "^6.4.9"
+    "@types/luxon": "^3.3.2",
+    "@types/nodemailer": "^6.4.9",
+    "@types/sha256": "^0.2.0"
   }
 }

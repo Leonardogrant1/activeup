@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import ReduxProvider from "@/redux/provider";
 import MobileMenu from "./components/mobile_menu";
 import UnderConstruction from "./components/under_construction";
+import Facebook from "./datasources/facebook";
 
 const nunito_sans = Nunito_Sans({ subsets: ["latin"] });
 
@@ -21,8 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Facebook />
       <body className={nunito_sans.className}>
-        <UnderConstruction />
+        {/* <UnderConstruction /> */}
         <ReduxProvider>
           <Header />
 
